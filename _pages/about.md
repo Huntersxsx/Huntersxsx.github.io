@@ -18,7 +18,7 @@ My research interests include but are not limited to Video Analysis, Cross-modal
 
 ## Recent Activities
 
-- **2021.9** Our paper 'Relation-aware Video Reading Comprehension for Temporal Language Grounding' is received in EMNLP 2021 main conference.
+- **2021.9** Our paper '[Relation-aware Video Reading Comprehension for Temporal Language Grounding](https://arxiv.org/abs/2110.05717)' is received in EMNLP 2021 main conference.
 
 - **2020.9** Become an intern in CLOUDWALK Inc. at Action Recognition department.
 
