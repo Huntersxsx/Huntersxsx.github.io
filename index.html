@@ -66,6 +66,9 @@
           </table>
 
           <ul>
+            <li><span style="color: gray" size="6px">[2023.02]</span>
+              &#127881 One paper was accepted by <strong><em>TCSVT</em></strong>.
+            </li>          	
             <li><span style="color: gray" size="6px">[2022.05]</span>
               &#127881 One paper was accepted by <strong><em>TCSVT</em></strong>.
             </li>
@@ -90,6 +93,51 @@
           <table
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
+
+              <tr onmouseout="CRNet_stop()" onmouseover="CRNet_start()">
+                <td style="padding:25px;width:30%;vertical-align:middle">
+                  <div class="one">
+                    <div class="two" id='CRNet_image'>
+                      <img src='images/CRNet_motivation.png' width="200">
+                    </div>
+                    <img src='images/CRNet_framework.png' width="200">
+                  </div>
+                  <script type="text/javascript">
+                    function CRNet_start() {
+                      document.getElementById('CRNet_image').style.opacity = "1";
+                    }
+
+                    function CRNet_stop() {
+                      document.getElementById('CRNet_image').style.opacity = "0";
+                    }
+                    CRNet_stop()
+                  </script>
+                </td>
+                <td style="padding:25px;width:70%;vertical-align:middle">
+                      <strong><papertitle>Video Moment Retrieval via Comprehensive Relation-aware Network </papertitle></strong>
+                  <br>
+                  <span style="color: red"><strong>Xin Sun</strong></span>,
+                  <a href="https://scholar.google.com/citations?user=sj4FqEgAAAAJ&hl=en">Jialin Gao</a>,
+				  <a href="#">Yizhe Zhu</a>,
+                  <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=SmlaHBYAAAAJ">Xuan Wang</a>,
+                  <a href="#">Xi Zhou</a>,
+                  &nbsp <em>in TCSVT</em>  
+                  <br>
+                  <a href="#">paper</a>
+                  /
+                  <a href="#">code</a>
+                  <p></p>
+                  <p>
+                  	This manuscript is a substantial <strong>extension of our RaNet in EMNLP2021</strong> with several improvements. 
+                  	First, a background suppression module is introduced to reduce the impact of unrelated background clips. 
+                  	Second, we model the interactions between clips and sentences, as well as clips and words, to comprehensively capture inter-modality relations. 
+                  	Finally, we propose a novel IoU attention mechanism to focus more on the dependencies among highly-correlated video moments.
+                  	The background suppression module and IoU attention mechanism work together to enhance the hierarchical relations within the model by respectively modulating clip-level and moment-level features. 
+                  	The clip-level interaction provides a complementary perspective by capturing localized visual information, resulting in a multi-granular perception of inter-modality information. 
+                  	As a result, the harmonious integration of these modules significantly improves the model's ability to model comprehensive relations.
+                    </p>
+                </td>
+              </tr>
 
 
               <tr onmouseout="w2w_stop()" onmouseover="w2w_start()">
