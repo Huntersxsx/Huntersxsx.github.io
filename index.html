@@ -31,10 +31,50 @@
     max-width: 90%;
     max-height: 90%;
   }
+
+      body {
+      margin: 0; /* 去除默认的 body margin */
+      font-family: Arial, sans-serif; /* 设置字体 */
+    }
+
+
+  nav {
+      display: flex; /* 使用 flex 布局 */
+      justify-content: center; /* 在主轴上居中对齐 */
+      background-color: white; /* 导航栏背景色 */
+      overflow: hidden;
+    }
+
+    nav a {
+      float: left; /* 将链接横向排列 */
+      display: block; /* 让链接占满父容器的宽度 */
+      color: black; /* 链接文本颜色 */
+      text-align: center; /* 文本居中 */
+      padding: 14px 16px; /* 设置内边距 */
+      text-decoration: none; /* 去掉下划线 */
+      font-size: 20px; /* 设置字体大小 */
+      font-weight: bold; /* 设置字体粗细 */
+    }
+
+    nav a:hover {
+      background-color: #ddd; /* 鼠标悬停时的背景色 */
+      color: orange; /* 鼠标悬停时的文本颜色 */
+    }
+
 </style>
 
 
 <body>
+
+  <nav>
+  <a href="#news">News</a>
+  <a href="#publications">Publications</a>
+  <a href="#internship">Internship</a>
+  <a href="#edution">Eduction</a>
+  <a href="#awards">Awards</a>
+  <a href="#services">Services</a>
+</nav>
+
   <table
     style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
     <tbody>
@@ -49,7 +89,7 @@
                     <name>Xin Sun | 孙新 </name>
                   </p>
 
-                  <p>Currently, I’m a forth-year Ph.D. student in <a href="https://cmic.sjtu.edu.cn/cn/Default.aspx"> Cooperative
+                  <p>Currently, I’m a fifth-year Ph.D. student in <a href="https://cmic.sjtu.edu.cn/cn/Default.aspx"> Cooperative
                    Medianet Innovation Center</a> at <a href="http://en.sjtu.edu.cn/"> Shanghai Jiao Tong University</a> (SJTU), supervised by 
                    <a href="https://baike.baidu.com/item/%E5%91%A8%E6%9B%A6/16034807"> Xi Zhou</a>.
                    Prior to that, I received my bachelor’s degree from <a href="http://dice.xjtu.edu.cn/"> Information 
@@ -78,13 +118,24 @@
             </tbody>
           </table>
 
+        <section id="news">
           <table
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <td style="padding:20px;width:100%;vertical-align:middle">
               <strong><heading>News</heading></strong>
             </td>
           </table>
+        </section>
 
+          <style>
+              .scrolling-list {
+                max-height: 120px; /* 设置最大高度，超过此高度将显示滚动条 */
+                overflow-y: auto; /* 只在需要时显示垂直滚动条 */
+                overflow-x: hidden; /* 隐藏水平滚动条 */
+              }
+          </style>
+
+          <div class="scrolling-list">
           <ul>
             <li><span style="color: gray" size="6px">[2023.10]</span>
               &#127881 One paper was accepted by <strong><em>Neurocomputing 2023</em></strong>.
@@ -110,14 +161,16 @@
 
 
           </ul>
+        </div>
 
-
+      <section id="publications">
           <table
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <td style="padding:20px;width:100%;vertical-align:middle">
               <strong><heading>Publications</heading></strong>
             </td>
           </table>
+        </section>
 
           <table
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
@@ -143,15 +196,17 @@
                   Zihan Rui,
                   Xi Zhou,
                   <br>
-                  <a href="#">paper</a>
+                  <a href="https://www.sciencedirect.com/science/article/pii/S0925231223009955">paper</a>
 <!--                   /
                   <a href="#">code</a> -->
                   <br>
-                  in <em>Neurocomputing</em>, 2023. (<strong>CCF-C</strong>)
+                  in <em>Nexurocomputing</em>, 2023. (<strong>CCF-C</strong>)
                   <p></p>
                   <details align="justify">
                     <summary>Details</summary>
-
+                      We propose a Contrastive SpatioTemporal Distilling (CSTD) approach that leverages spatial-frequency cues and temporal-contrastive alignment to improve high-compressed deepfake video detection. Our approach employs a two-stage spatiotemporal video encoder to fully exploit spatiotemporal inconsistency information. A fine-grained spatial-frequency distillation module is used to retrieve invariant forgery cues in spatial and frequency domains. 
+                      Additionally, a mutual-information temporal-contrastive distillation module is introduced to enhance the temporal correlated information and transfer the temporal structural knowledge from the teacher model to the student model. 
+                      We demonstrate the effectiveness and robustness of our method on low-quality high-compressed deepfake videos on public benchmarks.
                     </details>
                 </td>
               </tr>
@@ -175,7 +230,8 @@
                   <br>
                   (* means equal contribution)
                   <br>
-                  <a href="https://arxiv.org/abs/2307.03373">paper</a>
+                  <!-- <a href="https://arxiv.org/abs/2307.03373">paper</a> -->
+                  <a href='https://dl.acm.org/doi/10.1145/3581783.3611803'>paper</a>
                   /
                   <a href="https://github.com/983632847/All-in-One">code</a>
                   <br>
@@ -206,7 +262,7 @@
                   <span style="color: red"><strong>Xin Sun</strong></span>,
                   Xi Zhou,
                   <br>
-                  <a href="#">paper</a>
+                  <a href="https://link.springer.com/chapter/10.1007/978-3-031-44210-0_23">paper</a>
                   <br>
                   in <em>International Conference on Artificial Neural Networks (<strong>ICANN</strong>)</em>, 2023. (<strong>CCF-C</strong>)
                   <p></p>
@@ -346,7 +402,8 @@
                   Xi Zhou,
                   <!-- &nbsp <em>in SIGIR 2022</em>   -->
                   <br>
-                  <a href="https://arxiv.org/abs/2205.12886">paper</a>
+                  <!-- <a href="https://arxiv.org/abs/2205.12886">paper</a> -->
+                  <a href="https://dl.acm.org/doi/10.1145/3477495.3532083">paper</a>
                   /
                   <a href="https://github.com/Huntersxsx/MGPN">code</a>
                   <br>
@@ -396,7 +453,8 @@
                   <br>
                   (* means equal contribution)
                   <br>
-                  <a href="https://aclanthology.org/2021.emnlp-main.324.pdf">paper</a>
+                  <!-- <a href="https://aclanthology.org/2021.emnlp-main.324.pdf">paper</a> -->
+                  <a href="https://aclanthology.org/2021.emnlp-main.324/">paper</a>
                   /
                   <a href="https://github.com/Huntersxsx/RaNet">code</a>
                   <br>
@@ -415,12 +473,249 @@
 
           </table>
 
+      <section id="internship">
+        <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <strong><heading>Internship Experience</heading></strong>
+            </td>
+          </table>
+        </section>
+
+        <ul>
+          <table class="imgtable">
+                          <tbody>
+                              <tr>
+                                  <td>
+                                      <img src="images/ant.png" alt="WSFG" width="200px" height="64px">
+                                      &nbsp;
+                                  </td>
+                                  <td align="left">
+                                      <ul style="list-style-type: none;">
+                                          <li>
+                                              <p>
+                                                  <span style="color: gray" size="6px">[2023.02-2023.07]</span> &#129489;&#8205;&#128187; 
+                                                   <!-- &nbsp;&nbsp;&nbsp;&nbsp;</em>  -->
+                                                   Tiansuan Lab, AntGroup, Shanghai.
+                                                    <br>
+                                                    <em>Referring Image Segmentation; Multi-Modal Large Language Model</em>
+
+                                              </p>
+                                          </li>
+                                      </ul>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+          <table class="imgtable">
+                          <tbody>
+                              <tr>
+                                  <td>
+                                      <img src="images/oppo.png" alt="WSFG" width="200px" height="64px">
+                                      &nbsp;
+                                  </td>
+                                  <td align="left">
+                                      <ul style="list-style-type: none;">
+                                          <li>
+                                              <p>
+                                                  <span style="color: gray" size="6px">[2021.12-2022.02]</span> &#129489;&#8205;&#128187; 
+                                                  <!-- &nbsp;&nbsp;&nbsp;&nbsp;   -->
+                                                  Multi-modal Perception Group, OPPO, Shanghai.
+                                                  <br>
+                                                  <em>Vision Language Pre-training; Human Object Interaction</em>
+                                              </p>
+                                          </li>
+                                      </ul>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+          <table class="imgtable">
+                          <tbody>
+                              <tr>
+                                  <td>
+                                      <img src="images/cloudwalk.png" alt="WSFG" width="200px" height="64px">
+                                      &nbsp;
+                                  </td>
+                                  <td align="left">
+                                      <ul style="list-style-type: none;">
+                                          <li>
+                                              <p>
+                                                  <span style="color: gray" size="6px">[2020.07-2021.11]</span> &#129489;&#8205;&#128187; 
+                                                  <!-- <em>2020.07-2021.11 &nbsp;&nbsp;&nbsp;&nbsp;</em>  -->
+                                                  Video Analysis Group, Cloudwalk, Shanghai.
+                                                  <br>
+                                                  <em>Video Moment Retrieval; Action Recognition</em>
+                                              </p>
+                                          </li>
+                                      </ul>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+          </ul>
+          <br />
+
+      <section id="edution">
+        <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <strong><heading>Eduction</heading></strong>
+            </td>
+          </table>
+        </section>
+
+        <ul>
+          <table class="imgtable">
+                          <tbody>
+                              <tr>
+                                  <td>
+                                      <img src="images/sjtu.png" alt="WSFG" width="200px" height="64px">
+                                      &nbsp;
+                                  </td>
+                                  <td align="left">
+                                      <ul style="list-style-type: none;">
+                                          <li>
+                                              <p>
+                                                  <span style="color: gray" size="6px">[2019.09-Now]</span> &#129489;&#8205;&#127891; 
+                                                   <!-- &nbsp;&nbsp;&nbsp;&nbsp;</em>  -->
+                                                   Shanghai Jiao Tong University (SJTU), Shanghai.
+                                                    <br>
+                                                    <em>Ph.D. student in Information Engineering</em>
+
+                                              </p>
+                                          </li>
+                                      </ul>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+          <table class="imgtable">
+                          <tbody>
+                              <tr>
+                                  <td>
+                                      <img src="images/polyu.png" alt="WSFG" width="200px" height="45px">
+                                      &nbsp;
+                                  </td>
+                                  <td align="left">
+                                      <ul style="list-style-type: none;">
+                                          <li>
+                                              <p>
+                                                  <span style="color: gray" size="6px">[2017.07-2017.08]</span> &#129489;&#8205;&#127891; 
+                                                  <!-- &nbsp;&nbsp;&nbsp;&nbsp;   -->
+                                                  The Hong Kong Polytechnic University (PolyU), Hong Kong.
+                                                  <br>
+                                                  <em>Short-term Exchange</em>
+                                              </p>
+                                          </li>
+                                      </ul>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+          <table class="imgtable">
+                          <tbody>
+                              <tr>
+                                  <td>
+                                      <img src="images/xjtu.png" alt="WSFG" width="200px" height="55px">
+                                      &nbsp;
+                                  </td>
+                                  <td align="left">
+                                      <ul style="list-style-type: none;">
+                                          <li>
+                                              <p>
+                                                  <span style="color: gray" size="6px">[2015.08-2019.06]</span> &#129489;&#8205;&#127891; 
+                                                  <!-- <em>2020.07-2021.11 &nbsp;&nbsp;&nbsp;&nbsp;</em>  -->
+                                                  Xi'an Jiao Tong University (XJTU), Xi'an.
+                                                  <br>
+                                                  <em>Bachelor of Engineering in Information Engineering</em>
+                                              </p>
+                                          </li>
+                                      </ul>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+          </ul>
+          <br />
+
+          <section id="awards">
           <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <strong><heading>Awards</heading></strong>
+            </td>
+          </table>
+        </section>
+
+          <style>
+              .scrolling-list {
+                max-height: 160px; /* 设置最大高度，超过此高度将显示滚动条 */
+                overflow-y: auto; /* 只在需要时显示垂直滚动条 */
+                overflow-x: hidden; /* 隐藏水平滚动条 */
+              }
+          </style>
+
+          <div class="scrolling-list">
+
+          <ul>
+          <li><span style="color: gray" size="6px">[2022.11]</span>
+            &#128176 Huawei Scholarship. 
+          </li>          
+          <li><span style="color: gray" size="6px">[2020.05]</span>
+            &#127942 Regional Excellence Award in algorithm competition held by ZTE. 
+          </li>         
+          <li><span style="color: gray" size="6px">[2018.10]</span>
+            &#127942 Outstanding Student Model Nomination in Xi'an Jiaotong University. 
+          </li>
+          <li><span style="color: gray" size="6px">[2018.10]</span>
+            &#128176 Special Scholarship of Xi'an Jiaotong University (only 10 places). 
+          </li>
+           <li><span style="color: gray" size="6px">[2018.08]</span>
+            &#129351 First Place in National Undergraduate Electronic Design Contest.
+          </li> 
+          <li><span style="color: gray" size="6px">[2018.01]</span>
+            &#129351 First place in the VR training project held by Shanghai Jiaotong University. 
+          </li>
+          <li><span style="color: gray" size="6px">[2017.11]</span>
+            &#129352 Second Prize for the 11th Shaanxi College Students Mathematics Competition. 
+          </li>
+          <li><span style="color: gray" size="6px">[2017.10]</span>
+            &#128176 National Endeavor Scholarship (top 5%). 
+          </li>
+          <li><span style="color: gray" size="6px">[2016.12]</span>
+            &#129351 First Prize for Shaanxi Division of the Undergraduate Group of the National University Students Mathematical Contest in Modeling. 
+          </li>
+          <li><span style="color: gray" size="6px">[2016.11]</span>
+            &#129351 First Prize for the 8th National College Student Mathematics Competition.
+          </li>
+          <li><span style="color: gray" size="6px">[2016.10]</span>
+            &#128176 PengKang Scholarship (top 5%). 
+          </li>
+          <li><span style="color: gray" size="6px">[2016.05]</span>
+            &#129353 Third Prize for Band C in 2016 National English Competition for College Students. 
+          </li>    
+
+        </ul>
+
+      </div>
+
+
+
+
+          </ul>
+
+        <br/>
+
+      <section id="services">
+        <table
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <td style="padding:20px;width:100%;vertical-align:middle">
               <strong><heading>Professional Services</heading></strong>
             </td>
           </table>
+        </section>
+
 
         <ul>
           <li>
